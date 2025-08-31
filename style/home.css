@@ -1,0 +1,31 @@
+.main-of-page {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #333;
+  background-color: aqua;
+}
+
+.day {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.night {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
