@@ -1,0 +1,107 @@
+body {
+    direction: rtl; 
+    font-family: 'Arial', Tahoma, sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #f4f7f6;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* تنسيق الـ h4 ليكون هو المرجع للموقع المطلق */
+h4 {
+    position: relative; /* مهم جداً: لتحديد الموضع المطلق للزر بالنسبة له */
+    padding: 15px;
+    padding-left: 50px; /* زيادة المسافة من اليسار لإفساح المجال لزر الاستفهام */
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #ffffff;
+    cursor: pointer; /* مؤشر الضغط لجسم الذكر لزيادة العداد */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    overflow: hidden; 
+    line-height: 1.6;
+}
+
+h4:hover {
+    background-color: #f0f0f0; 
+}
+
+/* تنسيق زر الاستفسار لوضعه في الزاوية اليسرى العليا */
+.query-button {
+    position: absolute; /* تحديد الموضع بشكل مطلق */
+    left: 10px;        /* 10 بكسل من الجانب الأيسر */
+    top: 10px;         /* 10 بكسل من الأعلى */
+    
+    font-size: 1.2em;
+    color: #007bff; 
+    cursor: help; /* مؤشر المساعدة عند الوقوف عليه */
+    padding: 2px 5px;
+    background-color: #e9f0ff;
+    border-radius: 4px;
+    line-height: 1;
+    z-index: 10; 
+}
+
+.العدد {
+    font-size: 0.9em;
+    color: #007bff; 
+    margin-top: 5px;
+    font-weight: bold;
+    display: block; /* لضمان أخذ سطر جديد */
+    text-align: right;
+}
+
+/* تنسيق لعرض العداد الحالي */
+.counter-display {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #e9ecef; 
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #495057;
+    text-align: center;
+}
+
+/* تنسيق السند: مخفي وبلون رمادي خفيف */
+.sanad {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    color: #777; /* خط رمادي خفيف */
+    font-size: 0.9em;
+    font-style: italic;
+    display: none; /* هذا يضمن أنه مخفي حتى الضغط على زر الاستفهام */
+    clear: both; 
+    text-align: justify;
+}
+
+/* تنسيق الذكر المكتمل */
+h4.completed {
+    background-color: #d4edda; /* خلفية خضراء فاتحة */
+    border-color: #c3e6cb;
+}
+
+h4.completed .counter-display {
+    background-color: #28a745; /* خلفية خضراء داكنة للعداد */
+    color: white;
+}
+
+/* تنسيق زر العودة (اختياري) */
+button.back {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
