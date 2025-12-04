@@ -1,31 +1,76 @@
+body {
+    /* أساسيات الصفحة */
+    direction: rtl; 
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f7f6; 
+    margin: 0;
+    padding: 20px;
+    
+    /* 1. الترتيب والتحكم بالحاوية الرئيسية */
+    display: flex;
+    flex-direction: column; /* الترتيب العام: العنوان ثم الأزرار في سطر جديد */
+    align-items: center; /* توسيط كل العناصر أفقياً */
+    min-height: 100vh;
+}
+
+/* تنسيق العنوان الرئيسي */
 .main-of-page {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 24px;
-  color: #333;
-  background-color: aqua;
+    font-size: 2.5em;
+    color: #173f5f; 
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    border-bottom: 3px solid #007bff; 
+    text-align: center;
+    width: fit-content; 
 }
 
+/* 🌟 إضافة حاوية جديدة للأزرار فقط 🌟 */
+/* هذا الجزء غير موجود في كود HTML الخاص بك، لكنه ضروري للتجميع والترتيب */
+.buttons-container {
+    display: flex;
+    flex-direction: row; /* ترتيب العناصر الأبناء (الأزرار) جنباً إلى جنب */
+    gap: 20px; /* مسافة بين الأزرار */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* التوسيط داخل الـ body سيتم عن طريق align-items: center; على body */
+}
+
+
+/* تنسيق عام للأزرار */
+button {
+    padding: 15px 30px;
+    /* إلغاء margin لترك التباعد لـ gap في buttons-container */
+    margin: 0; 
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 280px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق زر "أذكار الصباح" (يوم/Day) */
 .day {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 18px;
-  color: white;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #ff9900; 
 }
 
+.day:hover {
+    background-color: #e68a00; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* تنسيق زر "أذكار المساء" (ليل/Night) */
 .night {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 18px;
-  color: white;
-  background-color: #f44336;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #336699; 
+}
+
+.night:hover {
+    background-color: #2b5780; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
